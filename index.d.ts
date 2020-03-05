@@ -13,6 +13,7 @@ export default class ReactTags extends Component<ReactTagsProps> {}
 export interface Tag {
     id: string | number;
     name: string;
+    type?: string;
     disabled?: boolean;
 }
 
@@ -48,6 +49,10 @@ export interface ReactTagsProps {
      * Allows users to add new (not suggested) tags. Default: false.
      */
     allowNew?: boolean;
+    /**
+     * Allows users to add new numbers when blocking new items
+     */
+    allowNumbers?: boolean;
     /**
      * Boolean parameter to control whether the text-input should be autofocused on mount. Default: true.
      */
