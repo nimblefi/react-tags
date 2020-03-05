@@ -74,7 +74,7 @@ export interface ReactTagsProps {
     /**
      * Function called when the user wants to add a tag. Receives the tag
      */
-    handleAddition: (tag: Tag) => void;
+    handleAddition: (tag: Tag, index: number) => void;
     /**
      * Optional event handler when focus on the input is lost. Receives no arguments.
      */
@@ -95,7 +95,10 @@ export interface ReactTagsProps {
      * Optional validation function that determines if tag should be added to tags. Receives a tag object. Should return a boolean.
      */
     handleValidate?: (tag: Tag) => boolean;
-    handleDelimiterTrigger ?: (tag: string) => void;
+    /**
+     * Optional trigger on delimiter
+     */
+    handleDelimiterTrigger?: (tag: string) => void;
     /**
      * An object containing additional attributes that will be applied to the underlying <input /> field.
      */

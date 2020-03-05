@@ -22,7 +22,7 @@ module.exports = {
   ],
   output: {
     filename: 'example/bundle.js'
-  },
+  }
   // resolve: {
   //   alias: {
   //     'react': 'preact-compat',

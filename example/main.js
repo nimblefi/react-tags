@@ -11,8 +11,12 @@ class App extends React.Component {
 
     this.state = {
       tags: [
-        { id: 184, name: 'Thailand' },
-        { id: 86, name: 'India' }
+        { id: 184, name: 'A' },
+        { id: 184, name: 'B' },
+        { id: 184, name: 'C' },
+        { id: 184, name: 'D' },
+        { id: 184, name: 'E' },
+        { id: 86, name: 'F' }
       ],
       suggestions
     }
@@ -24,8 +28,9 @@ class App extends React.Component {
     this.setState({ tags })
   }
 
-  handleAddition (tag) {
-    const tags = [].concat(this.state.tags, tag)
+  handleAddition (tag, cursor) {
+    let tags = this.state.tags.slice(0)
+    tags = tags.slice(0, cursor).concat(tag, tags.slice(cursor, tags.length))
     this.setState({ tags })
   }
 
