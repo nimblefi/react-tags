@@ -98,7 +98,7 @@ export interface ReactTagsProps {
     /**
      * Optional trigger on delimiter
      */
-    handleDelimiterTrigger?: (tag: string) => void;
+    handleDelimiterTrigger?: (tag: string, index: number) => void;
     /**
      * An object containing additional attributes that will be applied to the underlying <input /> field.
      */
